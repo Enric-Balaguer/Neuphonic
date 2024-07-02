@@ -12,5 +12,7 @@ I attach all python packages I used just as I acquired from the venv environment
 
 One thing to watch out for is HuggingFace tokens, as I used Mistral7B for my LLM, for safety reasons I took my tokens out before uploading my code, I hope this is not too big of an inconvenience.
 
+I apologise for not attempting more extended tasks, but due to heavy University work, this is the best I could do :)
+
 Thanks for this opportunity!
 Hope to hear from you soon!
