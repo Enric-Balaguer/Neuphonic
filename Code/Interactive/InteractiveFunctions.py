@@ -1,6 +1,5 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
-from huggingface_hub import login
 from TTS.utils.synthesizer import Synthesizer
 from TTS.utils.manage import ModelManager
 import soundfile as sf
@@ -9,7 +8,6 @@ import numpy as np
 import whisper
 import pyaudio
 import threading
-import soundfile as sf
 
 # For the interactive session, I want all models to be loaded first
 
@@ -24,7 +22,7 @@ def load_models():
 
     # Load LLM (Mistral 7B)
     model_name = "mistralai/Mistral-7B-v0.1"
-    llm_tokenizer = AutoTokenizer.from_pretrained(model_name, use_auth_token="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")
+    llm_tokenizer = AutoTokenizer.from_pretrained(model_name, use_auth_token="Input your token here")
     cache_dir = 'Neuphonic/Models'
     llm_model = AutoModelForCausalLM.from_pretrained(model_name, cache_dir=cache_dir, torch_dtype=torch.float16, device_map="auto")
 

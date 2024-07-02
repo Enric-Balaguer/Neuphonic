@@ -1,9 +1,5 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
-from huggingface_hub import login
-
-login(token="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")
-
 
 def LLM_response(text_prompt:str):
     """
@@ -11,7 +7,7 @@ def LLM_response(text_prompt:str):
     text_prompt: string prompt for Mistral 7B model.
     """
     model_name = "mistralai/Mistral-7B-v0.1"
-    tokenizer = AutoTokenizer.from_pretrained(model_name, use_auth_token="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")
+    tokenizer = AutoTokenizer.from_pretrained(model_name, use_auth_token="Input your token here")
     cache_dir = 'Neuphonic/Models'
     model = AutoModelForCausalLM.from_pretrained(model_name, cache_dir=cache_dir, torch_dtype=torch.float16, device_map="auto")
     
